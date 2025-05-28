@@ -10,9 +10,9 @@ terraform {
 
 provider "aws" {
   region     = var.aws_region
-  access_key = ""
-  secret_key = ""
-  token      = ""
+  # access_key = ""
+  # secret_key = ""
+  # token      = ""
 }
 
 #########################
@@ -65,6 +65,7 @@ variable "db_password" {
   description = "Senha master do banco de dados"
   type        = string
   sensitive   = true
+  default     = null # Remova qualquer valor padrão, se existir
 }
 
 variable "db_allocated_storage" {
