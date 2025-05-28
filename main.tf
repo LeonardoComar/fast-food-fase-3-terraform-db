@@ -9,10 +9,10 @@ terraform {
 }
 
 provider "aws" {
-  region     = var.aws_region
-  access_key = ""
-  secret_key = ""
-  token      = ""
+  region = var.aws_region
+  # access_key = ""
+  # secret_key = ""
+  # token      = ""
 }
 
 #########################
@@ -52,7 +52,7 @@ variable "db_instance_class" {
 variable "db_name" {
   description = "Nome do banco de dados padrão"
   type        = string
-  default     = "db_fastfood"  // Usando sublinhado em vez de hífen
+  default     = "db_fastfood" // Usando sublinhado em vez de hífen
 }
 
 variable "db_username" {
@@ -65,6 +65,7 @@ variable "db_password" {
   description = "Senha master do banco de dados"
   type        = string
   sensitive   = true
+  default     = null # Remova qualquer valor padrão, se existir
 }
 
 variable "db_allocated_storage" {
