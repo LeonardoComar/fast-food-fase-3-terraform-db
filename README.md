@@ -7,3 +7,4 @@
 - terraform plan
 - terraform apply
 - aws rds describe-db-instances
+- teste
