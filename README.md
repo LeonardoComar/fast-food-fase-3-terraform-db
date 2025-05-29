@@ -7,4 +7,4 @@
 - terraform plan
 - terraform apply
 - aws rds describe-db-instances
-- teste
+- RDS_STATE_BUCKET= aws rds describe-db-instances --db-instance-identifier my-rds-instance --query "DBInstances[0].Endpoint.Address" --output text
