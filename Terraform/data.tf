@@ -5,24 +5,24 @@ data "aws_vpc" "fastfood_vpc" {
   }
 }
 
-data "aws_subnet" "privada_1" {
+data "aws_subnet" "private_1" {
   filter {
     name   = "tag:Name"
-    values = ["fastfood-subnet-privada-1"]
+    values = ["fastfood-subnet-private-1"]
   }
 }
 
-data "aws_subnet" "privada_2" {
+data "aws_subnet" "private_2" {
   filter {
     name   = "tag:Name"
-    values = ["fastfood-subnet-privada-2"]
+    values = ["fastfood-subnet-private-2"]
   }
 }
 
 locals {
-  subnet_privadas_ids = [
-    data.aws_subnet.privada_1.id,
-    data.aws_subnet.privada_2.id
+  subnet_privates_ids = [
+    data.aws_subnet.private_1.id,
+    data.aws_subnet.private_2.id
   ]
 }
 

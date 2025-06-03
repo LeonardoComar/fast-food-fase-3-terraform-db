@@ -1,11 +1,11 @@
 resource "aws_security_group" "fastfood_security_group_rds" {
   name        = "fastfood-security-group-rds"
-  description = "Security group para RDS MySQL"
+  description = "Security group para RDS PostgreSQL"
   vpc_id      = var.vpc_id
 
   ingress {
-    from_port = 3306
-    to_port   = 3306
+    from_port = 5432
+    to_port   = 5432
     protocol  = "tcp"
     self      = true
   }
