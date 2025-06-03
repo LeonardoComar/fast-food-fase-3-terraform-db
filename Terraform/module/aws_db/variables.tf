@@ -5,7 +5,7 @@ variable "db_name" {
 
 variable "username" {
   type    = string
-  default = "postgres"
+  default = "root"
 }
 
 variable "vpc_id" {

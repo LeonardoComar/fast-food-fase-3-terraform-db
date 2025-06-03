@@ -1,5 +1,5 @@
-module "aws_rds" {
-  source = "./module/aws_rds"
+module "aws_db" {
+  source = "./module/aws_db"
 
   vpc_id            = data.aws_vpc.fastfood_vpc.id
   subnet_ids        = local.subnet_privates_ids
